@@ -1,0 +1,6 @@
+fastify:
+  port: 6000
+
+db:
+  port: 22227
+  database: 'bookmarks'
