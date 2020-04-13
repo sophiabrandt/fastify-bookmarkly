@@ -25,7 +25,6 @@ The project is a learning repository where I explore how to code a "clean" Node 
 - Node.js & [Fastify][fastify]
 - Docker & Docker Compose
 - MongoDB
-- [Apollo Server](https://github.com/apollographql/apollo-server)
 
 ## Installation
 
