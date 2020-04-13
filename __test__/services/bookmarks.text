@@ -11,7 +11,7 @@ test('example is loaded', (t) => {
     url: '/bookmarks'
   }, (err, res) => {
     t.error(err)
-    t.equal(res.payload, 'success')
+    t.equal(res.payload, '[]')
   })
 })
 

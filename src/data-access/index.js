@@ -22,7 +22,7 @@ function makeIdFromString(id) {
   return new mongodb.ObjectID(id)
 }
 
-const bookmarksDb = makeBookmarksDb({ makeDb })
+const bookmarksDb = makeBookmarksDb({ makeDb, database })
 
 module.exports = {
   bookmarksDb,

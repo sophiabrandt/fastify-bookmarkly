@@ -1,11 +1,26 @@
 function makeGetBookmarks({ listBookmarks }) {
   return async function getBookmarks(httpRequest) {
-    return {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      statusCode: 200,
-      body: 'success',
+    const queryString = httpRequest.query
+    const params = httpRequest.params
+
+    try {
+      const bookmarks = await listBookmarks({ queryString, params })
+
+      return {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        statusCode: 200,
+        body: bookmarks,
+      }
+    } catch (error) {
+      return {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        statusCode: 400,
+        body: { error: error.message },
+      }
     }
   }
 }
