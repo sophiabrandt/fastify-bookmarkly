@@ -1,8 +1,9 @@
 'use strict'
 const { makeFastifyCallback } = require('../../fastify-callback')
-const { getBookmarks } = require('../../controllers')
+const { getBookmarks, postBookmark } = require('../../controllers')
 module.exports = function (fastify, opts, next) {
   fastify.get('/bookmarks', makeFastifyCallback(getBookmarks))
+  fastify.post('/bookmarks', makeFastifyCallback(postBookmark))
   next()
 }
 

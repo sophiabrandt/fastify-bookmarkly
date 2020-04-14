@@ -16,22 +16,28 @@ function buildMakeBookmark({
     function validate({
       id = Id.makeId(),
       title = requiredParam('title'),
-      url = requiredParam('link'),
+      url = requiredParam('url'),
       status = bookmarkStatus.notStarted,
       description = '',
-      createdOn = new Date(Date.now()).toUTCString(),
-      modifiedOn = new Date(Date.now()).toUTCString(),
-      ...otherInfo
+      createdOn = new Date(Date.now()),
+      modifiedOn = new Date(Date.now()),
     }) {
       validateId(id)
       validateTitle(title)
       validateUrl(url)
-      validateStatus(upperAndTrimStatus(status))
-      return { title, url, ...otherInfo }
-    }
-
-    function upperAndTrimStatus(bookmarkStatus) {
-      return bookmarkStatus.trim().toUpperCase()
+      status = normalizeStatus(status)
+      validateStatus(status)
+      validateAndTransformDate(createdOn)
+      validateAndTransformDate(modifiedOn)
+      return Object.freeze({
+        id,
+        title,
+        url,
+        status,
+        description,
+        createdOn,
+        modifiedOn,
+      })
     }
 
     function validateId(id) {
@@ -48,6 +54,10 @@ function buildMakeBookmark({
       }
     }
 
+    function normalizeStatus(bookmarkStatus) {
+      return bookmarkStatus.trim().toUpperCase()
+    }
+
     function validateStatus(status) {
       /* check if status is one of bookMarkStatus */
       if (
@@ -55,7 +65,9 @@ function buildMakeBookmark({
           (statusValue) => statusValue === status
         )
       ) {
-        throw new InvalidPropertyError('Invalid status.')
+        throw new InvalidPropertyError(
+          'Invalid status: must be either NOT_STARTED, IN_PROGRESS or FINISHED.'
+        )
       }
     }
 
@@ -65,11 +77,19 @@ function buildMakeBookmark({
       }
     }
 
+    function validateAndTransformDate(date) {
+      if (Object.prototype.toString.call(date) !== '[object Date]') {
+        throw new InvalidPropertyError('Must be a valid date.')
+      }
+      return date.toISOString()
+    }
+
     return Object.freeze({
       getId: () => validBookmark.id,
       getTitle: () => validBookmark.title,
       getUrl: () => validBookmark.url,
       getStatus: () => validBookmark.status,
+      getDescription: () => validBookmark.description,
       getCreatedOn: () => validBookmark.createdOn,
       getModifiedOn: () => validBookmark.modifiedOn,
     })

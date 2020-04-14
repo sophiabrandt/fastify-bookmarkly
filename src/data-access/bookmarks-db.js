@@ -7,7 +7,14 @@ function makeBookmarksDb({ makeDb, database }) {
 
   async function findById() {}
 
-  async function insert() {}
+  async function insert({ id: _id, ...bookmarkInfo }) {
+    const db = await makeDb()
+    const inserted = await db
+      .collection(database)
+      .insertOne({ _id, ...bookmarkInfo })
+    const { _id: id, ...insertedInfo } = inserted.ops[0]
+    return { id, ...insertedInfo }
+  }
 
   async function update() {}
 

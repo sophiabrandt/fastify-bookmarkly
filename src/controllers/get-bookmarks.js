@@ -1,4 +1,6 @@
-function makeGetBookmarks({ listBookmarks }) {
+const { listBookmarks } = require('../use-cases')
+
+function makeGetBookmarks() {
   return async function getBookmarks(httpRequest) {
     const queryString = httpRequest.query
     const params = httpRequest.params

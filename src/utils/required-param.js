@@ -1,5 +1,7 @@
-import { RequiredParameterError } from './errors'
+const { RequiredParameterError } = require('./errors')
 
-export default function requiredParam (param) {
+function requiredParam(param) {
   throw new RequiredParameterError(param)
 }
+
+module.exports = { requiredParam }
