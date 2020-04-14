@@ -8,6 +8,7 @@
   - [Built With](#built-with)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Tests](#tests)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
@@ -28,34 +29,40 @@ The project is a learning repository where I explore how to code a "clean" Node 
 
 ## Installation
 
-Prerequisites:
+##### Prerequisites:
 
 - Node.js
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
-1. Clone the repository:
+##### 1. Clone the repository:
 
 ```bash
 $ git clone git@github.com:sophiabrandt/fastify-bookmarkly.git && cd fastify-bookmarkly
 ```
 
-2. Adjust configuration
+##### 2. Adjust configuration
 
 Rename `.env.example` to `.env` and adjust the variables to your liking
 
 Check the `config` folder and change the name of variables as needed.
 
-3. Use Docker and Docker Compose to spin up the Mongo Database.
+##### 3. Install dependencies
+
+```bash
+$ pnpm install # or npm install
+```
+
+##### 4. Use Docker and Docker Compose to spin up the Mongo Database
 
 ```bash
 $ docker-compose up -d
 ```
 
-4. Install dependencies
+##### 5. Create Database schema
 
 ```bash
-$ pnpm install # or npm install
+$ pnpm run db # or npm run db
 ```
 
 ## Usage
@@ -63,6 +70,16 @@ $ pnpm install # or npm install
 ```bash
 $ pnpm run start:dev # or npm run start:dev
 ```
+
+Visit `http://localhost:3000/bookmarks` with your browser.
+
+## Tests
+
+```bash
+$ pnpm run test # or npm run test
+```
+
+For now, the tests contain stubs, but are are already connected to MongoDB.
 
 ## Contributing
 
