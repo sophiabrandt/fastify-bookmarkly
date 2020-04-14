@@ -19,16 +19,15 @@ function buildMakeBookmark({
       url = requiredParam('url'),
       status = bookmarkStatus.notStarted,
       description = '',
-      createdOn = new Date(Date.now()),
-      modifiedOn = new Date(Date.now()),
+      createdOn = Date.now(),
+      modifiedOn = Date.now(),
     }) {
       validateId(id)
       validateTitle(title)
       validateUrl(url)
-      status = normalizeStatus(status)
-      validateStatus(status)
-      validateAndTransformDate(createdOn)
-      validateAndTransformDate(modifiedOn)
+      status = normalizeAndValidateStatus(status)
+      createdOn = validateAndTransformDate(createdOn)
+      modifiedOn = validateAndTransformDate(modifiedOn)
       return Object.freeze({
         id,
         title,
@@ -54,15 +53,12 @@ function buildMakeBookmark({
       }
     }
 
-    function normalizeStatus(bookmarkStatus) {
-      return bookmarkStatus.trim().toUpperCase()
-    }
-
-    function validateStatus(status) {
+    function normalizeAndValidateStatus(status) {
+      const normalizedStatus = status.trim().toUpperCase()
       /* check if status is one of bookMarkStatus */
       if (
         !Object.values(bookmarkStatus).some(
-          (statusValue) => statusValue === status
+          (statusValue) => statusValue === normalizedStatus
         )
       ) {
         throw new InvalidPropertyError(
@@ -78,10 +74,12 @@ function buildMakeBookmark({
     }
 
     function validateAndTransformDate(date) {
-      if (Object.prototype.toString.call(date) !== '[object Date]') {
+      const dateObject = new Date(date)
+      if (Object.prototype.toString.call(dateObject) !== '[object Date]') {
         throw new InvalidPropertyError('Must be a valid date.')
       }
-      return date.toISOString()
+      /* transform to ISO String, then transform to Date object*/
+      return new Date(dateObject.toISOString())
     }
 
     return Object.freeze({
