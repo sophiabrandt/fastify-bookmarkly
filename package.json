@@ -7,7 +7,7 @@
     "test": "__test__"
   },
   "scripts": {
-    "test": "tap __test__/**/*.test.js",
+    "test": "env NODE_ENV=test tap __test__/**/*.test.js",
     "start": "fastify start -l info ./src/app.js",
     "dev": "fastify start -w -l info -P ./src/app.js",
     "db": "babel-node ./db/index.js",
