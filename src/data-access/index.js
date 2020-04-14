@@ -14,12 +14,7 @@ async function makeDb() {
     await client.connect()
   }
   const db = client.db(database)
-  db.makeId = makeIdFromString
   return db
-}
-
-function makeIdFromString(id) {
-  return new mongodb.ObjectID(id)
 }
 
 const bookmarksDb = makeBookmarksDb({ makeDb, database })

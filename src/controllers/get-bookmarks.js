@@ -2,11 +2,9 @@ const { listBookmarks } = require('../use-cases')
 
 function makeGetBookmarks() {
   return async function getBookmarks(httpRequest) {
-    const queryString = httpRequest.query
-    const params = httpRequest.params
-
+    const queryStrings = httpRequest.query
     try {
-      const bookmarks = await listBookmarks({ queryString, params })
+      const bookmarks = await listBookmarks(queryStrings)
 
       return {
         headers: {

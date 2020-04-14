@@ -1,6 +1,6 @@
 function makeListBookmarks({ bookmarksDb }) {
-  return async function listBookmarks(params) {
-    return bookmarksDb.findAll(params)
+  return async function listBookmarks(queryStrings) {
+    return bookmarksDb.findAll(queryStrings)
   }
 }
 
