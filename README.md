@@ -29,37 +29,37 @@ The project is a learning repository where I explore how to code a "clean" Node 
 
 ## Installation
 
-##### Prerequisites:
+#### Prerequisites:
 
 - Node.js
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
-##### 1. Clone the repository:
+#### 1. Clone the repository:
 
 ```bash
 $ git clone git@github.com:sophiabrandt/fastify-bookmarkly.git && cd fastify-bookmarkly
 ```
 
-##### 2. Adjust configuration
+#### 2. Adjust configuration
 
 Rename `.env.example` to `.env` and adjust the variables to your liking
 
 Check the `config` folder and change the name of variables as needed.
 
-##### 3. Install dependencies
+#### 3. Install dependencies
 
 ```bash
 $ pnpm install # or npm install
 ```
 
-##### 4. Use Docker and Docker Compose to spin up the Mongo Database
+#### 4. Use Docker and Docker Compose to spin up the Mongo Database
 
 ```bash
 $ docker-compose up -d
 ```
 
-##### 5. Create Database schema
+#### 5. Create Database schema
 
 ```bash
 $ pnpm run db # or npm run db
@@ -68,10 +68,17 @@ $ pnpm run db # or npm run db
 ## Usage
 
 ```bash
-$ pnpm run start:dev # or npm run start:dev
+$ pnpm run dev # or npm run dev
 ```
 
 Visit `http://localhost:3000/bookmarks` with your browser.
+
+To create a production build:
+
+```bash
+$ pnpm run build # or npm run build
+$ pnpm run start # or npm run start
+```
 
 ## Tests
 
