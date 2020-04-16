@@ -24,11 +24,6 @@ function makePostBookmark() {
     }
 
     try {
-      /* delete user supplied values for id, createdOn and modifiedOn when
-      creating a new bookmark */
-      delete bookInfo.id
-      delete bookInfo.createdOn
-      delete bookInfo.modifiedOn
       const bookmark = await createBookmark(bookInfo)
       return {
         headers: {
