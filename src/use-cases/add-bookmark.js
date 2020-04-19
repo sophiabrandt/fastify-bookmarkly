@@ -1,7 +1,7 @@
 const { makeBookmark } = require('../bookmark')
 
-function makeCreateBookmark({ bookmarksDb }) {
-  return async function createBookmark(bookmarkInfo) {
+function makeAddBookmark({ bookmarksDb }) {
+  return async function addBookmark(bookmarkInfo) {
     const bookmark = makeBookmark(bookmarkInfo)
     return bookmarksDb.insert({
       id: bookmark.getId(),
@@ -15,4 +15,4 @@ function makeCreateBookmark({ bookmarksDb }) {
   }
 }
 
-module.exports = { makeCreateBookmark }
+module.exports = { makeAddBookmark }

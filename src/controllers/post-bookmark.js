@@ -1,4 +1,4 @@
-const { createBookmark } = require('../use-cases')
+const { addBookmark } = require('../use-cases')
 const { makeHttpError } = require('../utils/http-error')
 
 function makePostBookmark() {
@@ -24,7 +24,7 @@ function makePostBookmark() {
     }
 
     try {
-      const bookmark = await createBookmark(bookInfo)
+      const bookmark = await addBookmark(bookInfo)
       return {
         headers: {
           'Content-Type': 'application/json',

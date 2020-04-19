@@ -1,13 +1,13 @@
 const { bookmarksDb } = require('../data-access')
 const { makeListBookmarks } = require('./list-bookmarks')
-const { makeCreateBookmark } = require('./create-bookmark')
+const { makeAddBookmark } = require('./add-bookmark')
 
 const listBookmarks = makeListBookmarks({ bookmarksDb })
-const createBookmark = makeCreateBookmark({ bookmarksDb })
+const addBookmark = makeAddBookmark({ bookmarksDb })
 
 const bookmarksService = Object.freeze({
   listBookmarks,
-  createBookmark,
+  addBookmark,
 })
 
-module.exports = { bookmarksService, listBookmarks, createBookmark }
+module.exports = { bookmarksService, listBookmarks, addBookmark }
