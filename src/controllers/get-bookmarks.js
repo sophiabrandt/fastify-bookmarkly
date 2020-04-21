@@ -1,4 +1,5 @@
 const { listBookmarks } = require('../use-cases')
+const { makeHttpError } = require('../utils/http-error')
 
 function makeGetBookmarks() {
   return async function getBookmarks(httpRequest) {
@@ -14,13 +15,7 @@ function makeGetBookmarks() {
         body: bookmarks,
       }
     } catch (error) {
-      return {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        statusCode: 400,
-        body: { error: error.message },
-      }
+      return makeHttpError({ statusCode: 400, errorMessage: error.message })
     }
   }
 }

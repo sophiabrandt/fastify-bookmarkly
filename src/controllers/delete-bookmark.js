@@ -9,17 +9,11 @@ function makeDeleteBookmark() {
         headers: {
           'Content-Type': 'application/json',
         },
-        statusCode: deleted.deleted ? 200 : 400,
+        statusCode: deleted.deleted ? 200 : 404,
         body: { deleted },
       }
     } catch (error) {
-      return {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        statusCode: 400,
-        body: { error: error.message },
-      }
+      return makeHttpError({ statusCode: 400, errorMessage: error.message })
     }
   }
 }
