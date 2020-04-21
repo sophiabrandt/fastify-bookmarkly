@@ -39,7 +39,16 @@ function makeBookmarksDb({ makeDb, database }) {
     return result.map(({ _id: id, ...found }) => ({ id, ...found }))
   }
 
-  async function findById() {}
+  async function findById({ id: _id }) {
+    const db = await makeDb()
+    const result = await db.collection(database).find({ _id })
+    const found = await result.toArray()
+    if (found.length === 0) {
+      return null
+    }
+    const { _id: id, ...info } = found[0]
+    return { id, ...info }
+  }
 
   async function insert({ id: _id, ...bookmarkInfo }) {
     const db = await makeDb()
@@ -52,7 +61,12 @@ function makeBookmarksDb({ makeDb, database }) {
 
   async function update() {}
 
-  async function remove() {}
+  async function remove({ id: _id }) {
+    const db = await makeDb()
+    const result = await db.collection(database).deleteOne({ _id })
+    const deleted = Boolean(result.deletedCount)
+    return deleted
+  }
 
   return Object.freeze({ findAll, findById, insert, update, remove })
 }
