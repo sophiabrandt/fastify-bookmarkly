@@ -59,7 +59,13 @@ function makeBookmarksDb({ makeDb, database }) {
     return { id, ...insertedInfo }
   }
 
-  async function update() {}
+  async function update({ id: _id, ...updatedInfo }) {
+    const db = await makeDb()
+    const result = await db
+      .collection(database)
+      .updateOne({ _id }, { $set: { ...updatedInfo } })
+    return result.modifiedCount > 0 ? { id: _id, ...updatedInfo } : null
+  }
 
   async function remove({ id: _id }) {
     const db = await makeDb()
