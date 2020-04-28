@@ -23,6 +23,7 @@ function buildMakeBookmark({
       modifiedOn = Date.now(),
     }) {
       validateId(id)
+      title = transformTitle(title)
       validateTitle(title)
       validateUrl(url)
       status = transformStatus(status)
@@ -67,6 +68,10 @@ function buildMakeBookmark({
           'Invalid status: must be either NOT_STARTED, IN_PROGRESS or FINISHED.'
         )
       }
+    }
+
+    function transformTitle(title) {
+      return title.trim()
     }
 
     function transformStatus(status) {
