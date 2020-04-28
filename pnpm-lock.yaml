@@ -2,12 +2,12 @@ dependencies:
   babel-plugin-inline-dotenv: 1.5.0
   config: 3.3.1
   cuid: 2.1.8
-  fastify: 2.13.1
+  fastify: 2.14.0
   fastify-autoload: 1.2.2
   fastify-cli: 1.5.0
   fastify-mongodb: 2.0.0
   fastify-plugin: 1.6.1
-  mongodb: 3.5.5
+  mongodb: 3.5.6
 devDependencies:
   '@babel/cli': 7.8.4_@babel+core@7.9.0
   '@babel/core': 7.9.0
@@ -46,7 +46,7 @@ packages:
       integrity: sha512-a9gxpmdXtZEInkCSHUJDLHZVBgb1QS0jhss4cPP93EW7s+uC5bikET2twEF3KV+7rDblJcmNvTR7VJejqd2C2g==
   /@babel/compat-data/7.9.0:
     dependencies:
-      browserslist: 4.11.1
+      browserslist: 4.12.0
       invariant: 2.2.4
       semver: 5.7.1
     dev: true
@@ -67,7 +67,7 @@ packages:
       gensync: 1.0.0-beta.1
       json5: 2.1.3
       lodash: 4.17.15
-      resolve: 1.15.1
+      resolve: 1.17.0
       semver: 5.7.1
       source-map: 0.5.7
     dev: true
@@ -101,7 +101,7 @@ packages:
     dependencies:
       '@babel/compat-data': 7.9.0
       '@babel/core': 7.9.0
-      browserslist: 4.11.1
+      browserslist: 4.12.0
       invariant: 2.2.4
       levenary: 1.1.1
       semver: 5.7.1
@@ -266,7 +266,7 @@ packages:
       lodash: 4.17.15
       node-environment-flags: 1.0.6
       regenerator-runtime: 0.13.5
-      resolve: 1.15.1
+      resolve: 1.17.0
       v8flags: 3.1.3
     dev: true
     hasBin: true
@@ -600,7 +600,7 @@ packages:
       '@babel/core': 7.9.0
       '@babel/helper-module-transforms': 7.9.0
       '@babel/helper-plugin-utils': 7.8.3
-      babel-plugin-dynamic-import-node: 2.3.0
+      babel-plugin-dynamic-import-node: 2.3.3
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -612,7 +612,7 @@ packages:
       '@babel/helper-module-transforms': 7.9.0
       '@babel/helper-plugin-utils': 7.8.3
       '@babel/helper-simple-access': 7.8.3
-      babel-plugin-dynamic-import-node: 2.3.0
+      babel-plugin-dynamic-import-node: 2.3.3
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -624,7 +624,7 @@ packages:
       '@babel/helper-hoist-variables': 7.8.3
       '@babel/helper-module-transforms': 7.9.0
       '@babel/helper-plugin-utils': 7.8.3
-      babel-plugin-dynamic-import-node: 2.3.0
+      babel-plugin-dynamic-import-node: 2.3.3
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -820,7 +820,7 @@ packages:
       '@babel/plugin-transform-unicode-regex': 7.8.3_@babel+core@7.9.0
       '@babel/preset-modules': 0.1.3_@babel+core@7.9.0
       '@babel/types': 7.9.5
-      browserslist: 4.11.1
+      browserslist: 4.12.0
       core-js-compat: 3.6.5
       invariant: 2.2.4
       levenary: 1.1.1
@@ -850,7 +850,7 @@ packages:
       lodash: 4.17.15
       make-dir: 2.1.0
       pirates: 4.0.1
-      source-map-support: 0.5.16
+      source-map-support: 0.5.19
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -896,14 +896,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-/oA9z7JszpIioo6J6dB79LVUgJ3eD3cxkAmdCkvWWS+Y9tPtALs1rLqOekLUXUbYqM2fB9TTK0ibAyZJJOP/CA==
-  /ajv/6.12.0:
+  /ajv/6.12.2:
     dependencies:
       fast-deep-equal: 3.1.1
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
       uri-js: 4.2.2
     resolution:
-      integrity: sha512-D6gFiFA0RRLyUbvijN74DWAjXSFxWKaWP7mldxkVhyhAV3+SWA9HEJPHQ2c9soIeTFJqcSdFDGFgdqs1iUU2Hw==
+      integrity: sha512-k+V+hzjm5q/Mr8ef/1Y9goCmlsK4I6Sm74teeyGvFk1XrOsbsKLjEdrvny42CZ+a8sXbk8KWpY/bDwS+FLL2UQ==
   /ansi-regex/2.1.1:
     dev: true
     engines:
@@ -1022,12 +1022,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-wMHVg2EOHaMRxbzgFJ9gtjOOCrI80OHLG14rxi28XwOW8ux6IiEbRCGGGqCtdAIg4FQCbW20k9RsT4y3gJlFug==
-  /babel-plugin-dynamic-import-node/2.3.0:
+  /babel-plugin-dynamic-import-node/2.3.3:
     dependencies:
       object.assign: 4.1.0
     dev: true
     resolution:
-      integrity: sha512-o6qFkpeQEBxcqt0XYlWzAVxNCSCZdUgcR8IRlhD/8DylxjjO4foPcvTW0GGKa/cVt3rvxZ7o5ippJ+/0nvLhlQ==
+      integrity: sha512-jZVI+s9Zg3IqA/kdi0i6UDCybUI3aSBLnglhYbSSjKlV7yF1F/5LWv8MakQmvYpnbJDS6fcBL2KzHSxNCMtWSQ==
   /babel-plugin-inline-dotenv/1.5.0:
     dependencies:
       dotenv: 8.2.0
@@ -1104,16 +1104,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==
-  /browserslist/4.11.1:
+  /browserslist/4.12.0:
     dependencies:
-      caniuse-lite: 1.0.30001041
-      electron-to-chromium: 1.3.403
+      caniuse-lite: 1.0.30001048
+      electron-to-chromium: 1.3.420
       node-releases: 1.1.53
       pkg-up: 2.0.0
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-DCTr3kDrKEYNw6Jb9HFxVLQNaue8z+0ZfRBRjmCunKDEXEBajKDj2Y+Uelg+Pi29OnvaSGwjOsnRyNEkXzHg5g==
+      integrity: sha512-UH2GkcEDSI0k/lRkuDSzFl9ZZ87skSy9w2XAn1MsZnL+4c4rqbBd3e82UWHbYDpztABrPBhZsTEeuxVfHppqDg==
   /bson/1.1.4:
     dev: false
     engines:
@@ -1177,10 +1177,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
-  /caniuse-lite/1.0.30001041:
+  /caniuse-lite/1.0.30001048:
     dev: true
     resolution:
-      integrity: sha512-fqDtRCApddNrQuBxBS7kEiSGdBsgO4wiVw4G/IClfqzfhW45MbTumfN4cuUJGTM0YGFNn97DCXPJ683PS6zwvA==
+      integrity: sha512-g1iSHKVxornw0K8LG9LLdf+Fxnv7T1Z+mMsf0/YYLclQX4Cd522Ap0Lrw6NFqHgezit78dtyWxzlV2Xfc7vgRg==
   /capture-stack-trace/1.0.1:
     dev: true
     engines:
@@ -1213,6 +1213,7 @@ packages:
       path-is-absolute: 1.0.1
       readdirp: 2.2.1
       upath: 1.2.0
+    deprecated: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
     optionalDependencies:
       fsevents: 1.2.12
     resolution:
@@ -1307,12 +1308,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-4FJkXzKXEDB1snCFZlLP4gpC3JILicCpGbzG9f9G7tGqGCzETQ2hWPrcinA9oU4wtf2biUaEH5065UnMeR33oA==
-  /cookie/0.4.0:
+  /cookie/0.4.1:
     dev: false
     engines:
       node: '>= 0.6'
     resolution:
-      integrity: sha512-+Hp8fLp57wnUSt0tY0tHEXh4voZRDnoIrZPqlo3DPiI4y9lwg/jqx+1Om94/W6ZaPDOUbnjOt/99w66zk+l1Xg==
+      integrity: sha512-ZwrFkGJxUR3EIoXtO+yVE69Eb7KlixbaeAWfBQB9vVsNn/o+Yw69gBWSSDK825hQNdN+wF8zELf3dFNl/kxkUA==
   /copy-descriptor/0.1.1:
     engines:
       node: '>=0.10.0'
@@ -1320,7 +1321,7 @@ packages:
       integrity: sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
   /core-js-compat/3.6.5:
     dependencies:
-      browserslist: 4.11.1
+      browserslist: 4.12.0
       semver: 7.0.0
     dev: true
     resolution:
@@ -1333,7 +1334,7 @@ packages:
   /core-util-is/1.0.2:
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
-  /coveralls/3.0.11:
+  /coveralls/3.1.0:
     dependencies:
       js-yaml: 3.13.1
       lcov-parse: 1.0.0
@@ -1345,7 +1346,7 @@ packages:
       node: '>=6'
     hasBin: true
     resolution:
-      integrity: sha512-LZPWPR2NyGKyaABnc49dR0fpeP6UqhvGq4B5nUrTQ1UBy55z96+ga7r+/ChMdMJUwBgyJDXBi88UBgz2rs9IiQ==
+      integrity: sha512-sHxOu2ELzW8/NC1UP5XVLbZDzO4S3VxfFye3XYCznopHy02YjNkHcj5bKaVw2O7hVaBdBjEdQGpie4II1mWhuQ==
   /cp-file/6.2.0:
     dependencies:
       graceful-fs: 4.2.3
@@ -1499,10 +1500,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-OoOpBOVDUyh4dMVkt1SThoSamMk=
-  /electron-to-chromium/1.3.403:
+  /electron-to-chromium/1.3.420:
     dev: true
     resolution:
-      integrity: sha512-JaoxV4RzdBAZOnsF4dAlZ2ijJW72MbqO5lNfOBHUWiBQl3Rwe+mk2RCUMrRI3rSClLJ8HSNQNqcry12H+0ZjFw==
+      integrity: sha512-iVmQhf25F+5bdAyDrfOmCMjyLlIwsr9UT/LyYPQ3J1Vrypr9IgHf2PxqlsnzicnRAYDev6S9cl1tYlDHZUHY/g==
   /emoji-regex/7.0.3:
     dev: true
     resolution:
@@ -1646,7 +1647,7 @@ packages:
       integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
   /fast-json-stringify/1.20.1:
     dependencies:
-      ajv: 6.12.0
+      ajv: 6.12.2
       deepmerge: 4.2.2
       string-similarity: 4.0.1
     dev: false
@@ -1681,7 +1682,7 @@ packages:
       chokidar: 2.1.8
       commist: 1.1.0
       dotenv: 7.0.0
-      fastify: 2.13.1
+      fastify: 2.14.0
       fastify-plugin: 1.6.1
       generify: 3.0.3
       help-me: 1.1.0
@@ -1700,7 +1701,7 @@ packages:
   /fastify-mongodb/2.0.0:
     dependencies:
       fastify-plugin: 1.6.1
-      mongodb: 3.5.5
+      mongodb: 3.5.6
     dev: false
     resolution:
       integrity: sha512-Kr1W/S/mgMPvTkNYdRaGPZ675gQpCKHKkeW/Rg1Zd/8d4L7r4hDhCeivZzLuKlPotCUjP4P70FDu+mWhpl9HKA==
@@ -1710,10 +1711,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-APBcb27s+MjaBIerFirYmBLatoPCgmHZM6XP0K+nDL9k0yX8NJPWDY1RAC3bh6z+AB5ULS2j31BUfLMT3uaZ4A==
-  /fastify/2.13.1:
+  /fastify/2.14.0:
     dependencies:
       abstract-logging: 2.0.0
-      ajv: 6.12.0
+      ajv: 6.12.2
       avvio: 6.4.1
       fast-json-stringify: 1.20.1
       find-my-way: 2.2.2
@@ -1730,7 +1731,7 @@ packages:
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-ssh4CneRqWqYeHun03XicIcYxWXLEam5V9wHYSYm22yvSm91SnTzzajxs1w135rdZnT+VJ1MwOfToqwR6G5MoA==
+      integrity: sha512-uofJOU9Zf20iklDrACZZVe+qef6dswOe8IUnxUdHTY9QfHv301MgPxodvJFiRE2WAse7YrWr4sI5Lx6YIAuUAA==
   /fastparallel/2.3.0:
     dependencies:
       reusify: 1.0.4
@@ -1822,7 +1823,7 @@ packages:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
-      mime-types: 2.1.26
+      mime-types: 2.1.27
     dev: true
     engines:
       node: '>= 0.12'
@@ -1857,7 +1858,8 @@ packages:
       - node-pre-gyp
     dependencies:
       bindings: 1.5.0
-      nan: 2.14.0
+      nan: 2.14.1
+    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
     engines:
       node: '>= 4.0'
     optional: true
@@ -1958,7 +1960,7 @@ packages:
       integrity: sha1-qUwiJOvKwEeCoNkDVSHyRzW37JI=
   /har-validator/5.1.3:
     dependencies:
-      ajv: 6.12.0
+      ajv: 6.12.2
       har-schema: 2.0.0
     dev: true
     engines:
@@ -2489,8 +2491,8 @@ packages:
       integrity: sha512-mkAdOIt79FD6irqjYSs4rdbnlT5vRonMEvBVPVb3XmevfS8kgRXwfes0dhPdEtzTWD/1eNE/Bm/G1iRt6DcnQQ==
   /light-my-request/3.7.4:
     dependencies:
-      ajv: 6.12.0
-      cookie: 0.4.0
+      ajv: 6.12.2
+      cookie: 0.4.1
       readable-stream: 3.6.0
       set-cookie-parser: 2.4.5
     dev: false
@@ -2625,20 +2627,20 @@ packages:
     dev: false
     resolution:
       integrity: sha512-eylPpZA+K3xO9kpDjagoPkEUkNcWV3EAo5OEz0MqsekUpT7KbnQkk8HNZkh4phx2vvOAmNNZuLRWF9lDDHPpVQ==
-  /mime-db/1.43.0:
+  /mime-db/1.44.0:
     dev: true
     engines:
       node: '>= 0.6'
     resolution:
-      integrity: sha512-+5dsGEEovYbT8UY9yD7eE4XTc4UwJ1jBYlgaQQF38ENsKR3wj/8q8RFZrF9WIZpB2V1ArTVFUva8sAul1NzRzQ==
-  /mime-types/2.1.26:
+      integrity: sha512-/NOTfLrsPBVeH7YtFPgsVWveuL+4SjjYxaQ1xtM1KMFj7HdxlBlxeyNLzhyJVx7r4rZGJAZ/6lkKCitSc/Nmpg==
+  /mime-types/2.1.27:
     dependencies:
-      mime-db: 1.43.0
+      mime-db: 1.44.0
     dev: true
     engines:
       node: '>= 0.6'
     resolution:
-      integrity: sha512-01paPWYgLrkqAyrlDorC1uDwl2p3qZT7yl806vW7DvDoxwXi46jsjFbg+WdwotBIk6/MbEhO/dh5aZ5sNj/dWQ==
+      integrity: sha512-JIhqnCasI9yD+SsmkquHBxTSEuZdQX5BuQnS2Vc7puQQQ+8yiP5AY5uWhpdv4YL4VM5c6iliiYWPgJ/nJQLp7w==
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.11
@@ -2674,7 +2676,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-TTyDlLRuSkJny70Ukjz0G4nHuTj3g2OF7zJS7rH/8nNKYxA3IJskXWYsj9hdht5Hz2JYklAqeJLSLg+IOldXVA==
-  /mongodb/3.5.5:
+  /mongodb/3.5.6:
     dependencies:
       bl: 2.2.0
       bson: 1.1.4
@@ -2687,17 +2689,17 @@ packages:
     optionalDependencies:
       saslprep: 1.0.3
     resolution:
-      integrity: sha512-GCjDxR3UOltDq00Zcpzql6dQo1sVry60OXJY3TDmFc2SWFY6c8Gn1Ardidc5jDirvJrx2GC3knGOImKphbSL3A==
+      integrity: sha512-sh3q3GLDLT4QmoDLamxtAECwC3RGjq+oNuK1ENV8+tnipIavss6sMYt77hpygqlMOCt0Sla5cl7H4SKCVBCGEg==
   /ms/2.0.0:
     resolution:
       integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
   /ms/2.1.2:
     resolution:
       integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
-  /nan/2.14.0:
+  /nan/2.14.1:
     optional: true
     resolution:
-      integrity: sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
+      integrity: sha512-isWHgVjnFjh2x2yuJ/tj3JbwoHu3UC2dX5G/88Cm24yB6YopVgxvBObDY7n5xW6ExmFhJpSEQqFPvq9zaXc8Jw==
   /nanomatch/1.2.13:
     dependencies:
       arr-diff: 4.0.0
@@ -2739,7 +2741,7 @@ packages:
   /normalize-package-data/2.5.0:
     dependencies:
       hosted-git-info: 2.8.8
-      resolve: 1.15.1
+      resolve: 1.17.0
       semver: 5.7.1
       validate-npm-package-license: 3.0.4
     dev: true
@@ -3306,7 +3308,7 @@ packages:
       is-typedarray: 1.0.0
       isstream: 0.1.2
       json-stringify-safe: 5.0.1
-      mime-types: 2.1.26
+      mime-types: 2.1.27
       oauth-sign: 0.9.0
       performance-now: 2.1.0
       qs: 6.5.2
@@ -3352,12 +3354,12 @@ packages:
     deprecated: 'https://github.com/lydell/resolve-url#deprecated'
     resolution:
       integrity: sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
-  /resolve/1.15.1:
+  /resolve/1.17.0:
     dependencies:
       path-parse: 1.0.6
     dev: true
     resolution:
-      integrity: sha512-84oo6ZTtoTUpjgNEr5SJyzQhzL72gaRodsSfyxC/AXRvwu0Yse9H8eF9IpGo7b8YetZhlI6v7ZQ6bKBFV/6S7w==
+      integrity: sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==
   /ret/0.1.15:
     engines:
       node: '>=0.12'
@@ -3518,13 +3520,13 @@ packages:
       urix: 0.1.0
     resolution:
       integrity: sha512-Htz+RnsXWk5+P2slx5Jh3Q66vhQj1Cllm0zvnaY98+NFx+Dv2CF/f5O/t8x+KaNdrdIAsruNzoh/KpialbqAnw==
-  /source-map-support/0.5.16:
+  /source-map-support/0.5.19:
     dependencies:
       buffer-from: 1.1.1
       source-map: 0.6.1
     dev: true
     resolution:
-      integrity: sha512-efyLRJDr68D9hBBNIPWFjhpFzURh+KJykQwvMyW5UiZzYwoF6l4YMMDIJJEyFWxWCqfyxLzz6tSfUFR+kXXsVQ==
+      integrity: sha512-Wonm7zOCIJzBGQdB+thsPar0kYuCIzYvxZwlBa87yi/Mdjv7Tip2cyVbLj5o0cFPN4EVkuTwb3GDDyUx2DGnGw==
   /source-map-url/0.4.0:
     resolution:
       integrity: sha1-PpNdfd1zYxuXZZlW1VEo6HtQhKM=
@@ -3564,13 +3566,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-lr2EZCctC2BNR7j7WzJ2FpDznxky1sjfxvvYEyzxNyb6lZXHODmEoJeFu4JupYlkfha1KZpJyoqiJ7pgA1qq8Q==
-  /spdx-exceptions/2.2.0:
+  /spdx-exceptions/2.3.0:
     dev: true
     resolution:
-      integrity: sha512-2XQACfElKi9SlVb1CYadKDXvoajPgBVPn/gOQLrTvHdElaVhr7ZEbqJaRnJLVNeaI4cMEAgVCeBMKF6MWRDCRA==
+      integrity: sha512-/tTrYOC7PPI1nUAgx34hUpqXuyJG+DTHJTnIULG4rDygi4xu/tfgmq1e1cIRwRzwZgo4NLySi+ricLkZkw4i5A==
   /spdx-expression-parse/3.0.0:
     dependencies:
-      spdx-exceptions: 2.2.0
+      spdx-exceptions: 2.3.0
       spdx-license-ids: 3.0.5
     dev: true
     resolution:
@@ -3778,7 +3780,7 @@ packages:
       capture-stack-trace: 1.0.1
       clean-yaml-object: 0.1.0
       color-support: 1.1.3
-      coveralls: 3.0.11
+      coveralls: 3.1.0
       domain-browser: 1.2.0
       esm: 3.2.25
       foreground-child: 1.5.6
@@ -3796,13 +3798,13 @@ packages:
       own-or-env: 1.0.1
       rimraf: 2.7.1
       signal-exit: 3.0.3
-      source-map-support: 0.5.16
+      source-map-support: 0.5.19
       stack-utils: 1.0.2
       tap-mocha-reporter: 3.0.9
       tap-parser: 7.0.0
       tmatch: 4.0.0
       trivial-deferred: 1.0.1
-      ts-node: 8.8.2_typescript@3.8.3
+      ts-node: 8.9.1_typescript@3.8.3
       tsame: 2.0.1
       typescript: 3.8.3
       write-file-atomic: 2.4.3
@@ -3905,12 +3907,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-N21NKdlR1jaKb3oK6FwvTV4GWPM=
-  /ts-node/8.8.2_typescript@3.8.3:
+  /ts-node/8.9.1_typescript@3.8.3:
     dependencies:
       arg: 4.1.3
       diff: 4.0.2
       make-error: 1.3.6
-      source-map-support: 0.5.16
+      source-map-support: 0.5.19
       typescript: 3.8.3
       yn: 3.1.1
     dev: true
@@ -3920,7 +3922,7 @@ packages:
     peerDependencies:
       typescript: '>=2.7'
     resolution:
-      integrity: sha512-duVj6BpSpUpD/oM4MfhO98ozgkp3Gt9qIp3jGxwU2DFvl/3IRaEAvbLa8G60uS7C77457e/m5TMowjedeRxI1Q==
+      integrity: sha512-yrq6ODsxEFTLz0R3BX2myf0WBCSQh9A+py8PBo1dCzWIOcvisbyH6akNKqDHMgXePF2kir5mm5JXJTH3OUJYOQ==
   /tsame/2.0.1:
     dev: true
     resolution:
@@ -4162,12 +4164,12 @@ specifiers:
   config: ^3.3.1
   cuid: ^2.1.8
   dotenv: ^8.2.0
-  fastify: ^2.0.0
-  fastify-autoload: ^1.0.0
+  fastify: ^2.14.0
+  fastify-autoload: ^1.2.2
   fastify-cli: ^1.5.0
   fastify-mongodb: ^2.0.0
-  fastify-plugin: ^1.5.0
+  fastify-plugin: ^1.6.1
   mongo-clean: ^2.0.0
-  mongodb: ^3.5.5
+  mongodb: ^3.5.6
   rimraf: ^3.0.2
-  tap: ^12.5.3
+  tap: ^12.7.0
