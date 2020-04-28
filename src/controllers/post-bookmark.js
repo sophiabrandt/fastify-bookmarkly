@@ -3,9 +3,9 @@ const { makeHttpError } = require('../utils/http-error')
 
 function makePostBookmark() {
   return async function postBookmark(httpRequest) {
-    let bookInfo = httpRequest.body
+    let bookmarkInfo = httpRequest.body
 
-    if (!bookInfo) {
+    if (!bookmarkInfo) {
       return makeHttpError({
         statusCode: 400,
         errorMessage: 'Bad request. No POST body.',
@@ -24,7 +24,7 @@ function makePostBookmark() {
     }
 
     try {
-      const bookmark = await addBookmark(bookInfo)
+      const bookmark = await addBookmark(bookmarkInfo)
       return {
         headers: {
           'Content-Type': 'application/json',
@@ -33,13 +33,10 @@ function makePostBookmark() {
         body: bookmark,
       }
     } catch (error) {
-      return {
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      return makeHttpError({
         statusCode: 400,
-        body: { error: error.message },
-      }
+        errorMessage: error.message,
+      })
     }
   }
 }
