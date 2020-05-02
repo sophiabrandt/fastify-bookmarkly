@@ -58,7 +58,7 @@ function buildMakeBookmark({
     }
 
     function validateStatus(status) {
-      /* check if status is one of bookMarkStatus */
+      /* check if status is one of bookmarkStatus */
       if (
         !Object.values(bookmarkStatus).some(
           (statusValue) => statusValue === status
