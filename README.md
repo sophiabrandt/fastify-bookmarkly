@@ -43,8 +43,6 @@ $ git clone git@github.com:sophiabrandt/fastify-bookmarkly.git && cd fastify-boo
 
 #### 2. Adjust configuration
 
-Rename `.env.example` to `.env` and adjust the variables to your liking
-
 Check the `config` folder and change the name of variables as needed.
 
 #### 3. Install dependencies
