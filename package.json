@@ -21,21 +21,21 @@
     "babel-plugin-inline-dotenv": "^1.5.0",
     "config": "^3.3.1",
     "cuid": "^2.1.8",
-    "fastify": "^2.14.0",
+    "fastify": "^2.15.0",
     "fastify-autoload": "^1.2.2",
     "fastify-cli": "^1.5.0",
     "fastify-mongodb": "^2.0.0",
     "fastify-plugin": "^1.6.1",
-    "mongodb": "^3.5.6"
+    "mongodb": "^3.5.9"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/node": "^7.8.7",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
     "dotenv": "^8.2.0",
     "mongo-clean": "^2.0.0",
     "rimraf": "^3.0.2",
-    "tap": "^12.7.0"
+    "tap": "^14.10.7"
   }
 }
