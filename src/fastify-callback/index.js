@@ -11,9 +11,10 @@ function makeFastifyCallback(controller) {
         'User-Agent': request.headers['user-agent'],
       },
     }
+    console.log(httpRequest)
     controller(httpRequest)
       .then((httpReply) => {
-        if (httpReply.headers) {
+        if (httpRequest.headers) {
           reply.headers(httpReply.headers)
         }
         reply.type('application/json')
