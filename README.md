@@ -69,7 +69,9 @@ $ pnpm run db # or npm run db
 $ pnpm run dev # or npm run dev
 ```
 
-Visit `http://localhost:3000/bookmarks` with your browser.
+Visit [http://localhost:3000/bookmarks](http://localhost:3000/bookmarks) with your browser.
+
+Swagger documentation is available under [http://localhost:3000/docs](http://localhost:3000/docs).
 
 To create a production build:
 
