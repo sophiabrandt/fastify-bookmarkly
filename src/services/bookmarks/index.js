@@ -8,11 +8,11 @@ const {
   deleteBookmark,
 } = require('../../controllers')
 module.exports = function (fastify, opts, next) {
-  fastify.get('/bookmarks', makeFastifyCallback(getBookmarks))
-  fastify.get('/bookmarks/:id', makeFastifyCallback(getSingleBookmark))
-  fastify.post('/bookmarks', makeFastifyCallback(postBookmark))
-  fastify.patch('/bookmarks/:id', makeFastifyCallback(patchBookmark))
-  fastify.delete('/bookmarks/:id', makeFastifyCallback(deleteBookmark))
+  fastify.get('/', makeFastifyCallback(getBookmarks))
+  fastify.get('/:id', makeFastifyCallback(getSingleBookmark))
+  fastify.post('/', makeFastifyCallback(postBookmark))
+  fastify.patch('/:id', makeFastifyCallback(patchBookmark))
+  fastify.delete('/:id', makeFastifyCallback(deleteBookmark))
   next()
 }
 
