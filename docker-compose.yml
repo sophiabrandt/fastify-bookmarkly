@@ -1,14 +1,16 @@
-version: '2.4'
-
 services:
   db:
-    image: mongo:4.0.17-xenial
+    image: mongo:4.4.6-bionic
     ports:
       - 22227:27017
     volumes:
       - db-data:/data/db:delegated
     healthcheck:
-      test: ["CMD-SHELL", "if mongo --eval 'quit(db.runCommand({ ping: 1 }).ok ? 0 : 2)'; then exit 0; fi; exit 1;"]
+      test:
+        [
+          'CMD-SHELL',
+          "if mongo --eval 'quit(db.runCommand({ ping: 1 }).ok ? 0 : 2)'; then exit 0; fi; exit 1;",
+        ]
       interval: 10s
       start_period: 10s
       timeout: 4s
