@@ -73,6 +73,15 @@ Visit [http://localhost:3000/bookmarks](http://localhost:3000/bookmarks) with yo
 
 Swagger documentation is available under [http://localhost:3000/docs](http://localhost:3000/docs).
 
+Example request with [curl](https://curl.se):
+
+```sh
+curl -X POST \
+  'http://127.0.0.1:3000/bookmarks/' \
+  -H 'Content-Type: application/json' \
+  -d '{"title": "hacker news", "description": "news for programmers", "url": "https://hackerweb.app"}'
+```
+
 To create a production build:
 
 ```bash
