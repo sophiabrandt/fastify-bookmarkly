@@ -21,7 +21,7 @@
     "babel-plugin-inline-dotenv": "^1.6.0",
     "config": "^3.3.6",
     "cuid": "^2.1.8",
-    "fastify": "^3.18.0",
+    "fastify": "^3.29.4",
     "fastify-autoload": "^3.7.1",
     "fastify-cli": "^2.13.0",
     "fastify-mongodb": "^2.0.1",
