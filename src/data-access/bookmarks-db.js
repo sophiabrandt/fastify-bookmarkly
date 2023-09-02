@@ -52,11 +52,10 @@ function makeBookmarksDb({ makeDb, database }) {
 
   async function insert({ id: _id, ...bookmarkInfo }) {
     const db = await makeDb();
-    const inserted = await db
+    const { insertedId: id } = await db
       .collection(database)
       .insertOne({ _id, ...bookmarkInfo });
-    const { _id: id, ...insertedInfo } = inserted.ops[0];
-    return { id, ...insertedInfo };
+    return { id, ...bookmarkInfo };
   }
 
   async function update({ id: _id, ...updatedInfo }) {
