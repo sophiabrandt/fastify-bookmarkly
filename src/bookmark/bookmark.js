@@ -1,8 +1,8 @@
 const bookmarkStatus = Object.freeze({
-  notStarted: 'NOT_STARTED',
-  inProgress: 'IN_PROGRESS',
-  finished: 'FINISHED',
-})
+  notStarted: "NOT_STARTED",
+  inProgress: "IN_PROGRESS",
+  finished: "FINISHED",
+});
 
 function buildMakeBookmark({
   Id,
@@ -11,27 +11,27 @@ function buildMakeBookmark({
   requiredParam,
 }) {
   return function makeBookMark(bookmarkInfo) {
-    const validBookmark = validate(bookmarkInfo)
+    const validBookmark = validate(bookmarkInfo);
 
     function validate({
       id = Id.makeId(),
-      title = requiredParam('title'),
-      url = requiredParam('url'),
+      title = requiredParam("title"),
+      url = requiredParam("url"),
       status = bookmarkStatus.notStarted,
-      description = '',
+      description = "",
       createdOn = Date.now(),
       modifiedOn = Date.now(),
     }) {
-      validateId(id)
-      title = transformTitle(title)
-      validateTitle(title)
-      validateUrl(url)
-      status = transformStatus(status)
-      validateStatus(status)
-      createdOn = transformDatetoDateObject(createdOn)
-      modifiedOn = transformDatetoDateObject(modifiedOn)
-      validateDate(createdOn)
-      validateDate(modifiedOn)
+      validateId(id);
+      title = transformTitle(title);
+      validateTitle(title);
+      validateUrl(url);
+      status = transformStatus(status);
+      validateStatus(status);
+      createdOn = transformDatetoDateObject(createdOn);
+      modifiedOn = transformDatetoDateObject(modifiedOn);
+      validateDate(createdOn);
+      validateDate(modifiedOn);
       return Object.freeze({
         id,
         title,
@@ -40,20 +40,20 @@ function buildMakeBookmark({
         description,
         createdOn,
         modifiedOn,
-      })
+      });
     }
 
     function validateId(id) {
       if (!Id.isValidId(id)) {
-        throw new InvalidPropertyError('Invalid id.')
+        throw new InvalidPropertyError("Invalid id.");
       }
     }
 
     function validateTitle(title) {
       if (title.length < 2) {
         throw new InvalidPropertyError(
-          'Title must be at least 2 characters long.'
-        )
+          "Title must be at least 2 characters long.",
+        );
       }
     }
 
@@ -61,39 +61,39 @@ function buildMakeBookmark({
       /* check if status is one of bookmarkStatus */
       if (
         !Object.values(bookmarkStatus).some(
-          (statusValue) => statusValue === status
+          (statusValue) => statusValue === status,
         )
       ) {
         throw new InvalidPropertyError(
-          'Invalid status: must be either NOT_STARTED, IN_PROGRESS or FINISHED.'
-        )
+          "Invalid status: must be either NOT_STARTED, IN_PROGRESS or FINISHED.",
+        );
       }
     }
 
     function transformTitle(title) {
-      return title.trim()
+      return title.trim();
     }
 
     function transformStatus(status) {
-      return status.trim().toUpperCase()
+      return status.trim().toUpperCase();
     }
 
     function validateUrl(url) {
       if (!isValidUrl(url)) {
-        throw new InvalidPropertyError('Invalid url.')
+        throw new InvalidPropertyError("Invalid url.");
       }
     }
 
     function validateDate(date) {
-      if (Object.prototype.toString.call(date) !== '[object Date]') {
-        throw new InvalidPropertyError('Must be a valid date.')
+      if (Object.prototype.toString.call(date) !== "[object Date]") {
+        throw new InvalidPropertyError("Must be a valid date.");
       }
-      return date
+      return date;
     }
 
     function transformDatetoDateObject(date) {
       /* transform to ISO String, then transform to Date object*/
-      return new Date(new Date(date).toISOString())
+      return new Date(new Date(date).toISOString());
     }
 
     return Object.freeze({
@@ -104,8 +104,8 @@ function buildMakeBookmark({
       getDescription: () => validBookmark.description,
       getCreatedOn: () => validBookmark.createdOn,
       getModifiedOn: () => validBookmark.modifiedOn,
-    })
-  }
+    });
+  };
 }
 
-module.exports = { buildMakeBookmark }
+module.exports = { buildMakeBookmark };

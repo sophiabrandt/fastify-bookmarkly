@@ -1,29 +1,29 @@
 class UniqueConstraintError extends Error {
   constructor(value) {
-    super(`${value} must be unique.`)
+    super(`${value} must be unique.`);
 
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, UniqueConstraintError)
+      Error.captureStackTrace(this, UniqueConstraintError);
     }
   }
 }
 
 class InvalidPropertyError extends Error {
   constructor(msg) {
-    super(msg)
+    super(msg);
 
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, InvalidPropertyError)
+      Error.captureStackTrace(this, InvalidPropertyError);
     }
   }
 }
 
 class RequiredParameterError extends Error {
   constructor(param) {
-    super(`${param} is required.`)
+    super(`${param} is required.`);
 
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, RequiredParameterError)
+      Error.captureStackTrace(this, RequiredParameterError);
     }
   }
 }
@@ -32,4 +32,4 @@ module.exports = {
   UniqueConstraintError,
   InvalidPropertyError,
   RequiredParameterError,
-}
+};

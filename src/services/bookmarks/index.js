@@ -1,20 +1,20 @@
-'use strict'
-const { makeFastifyCallback } = require('../../fastify-callback')
+"use strict";
+const { makeFastifyCallback } = require("../../fastify-callback");
 const {
   getBookmarks,
   getSingleBookmark,
   postBookmark,
   patchBookmark,
   deleteBookmark,
-} = require('../../controllers')
+} = require("../../controllers");
 module.exports = function (fastify, opts, next) {
-  fastify.get('/', makeFastifyCallback(getBookmarks))
-  fastify.get('/:id', makeFastifyCallback(getSingleBookmark))
-  fastify.post('/', makeFastifyCallback(postBookmark))
-  fastify.patch('/:id', makeFastifyCallback(patchBookmark))
-  fastify.delete('/:id', makeFastifyCallback(deleteBookmark))
-  next()
-}
+  fastify.get("/", makeFastifyCallback(getBookmarks));
+  fastify.get("/:id", makeFastifyCallback(getSingleBookmark));
+  fastify.post("/", makeFastifyCallback(postBookmark));
+  fastify.patch("/:id", makeFastifyCallback(patchBookmark));
+  fastify.delete("/:id", makeFastifyCallback(deleteBookmark));
+  next();
+};
 
 // If you prefer async/await, use the following
 //

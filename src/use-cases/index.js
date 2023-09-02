@@ -1,15 +1,15 @@
-const { bookmarksDb } = require('../data-access')
-const { makeListBookmarks } = require('./list-bookmarks')
-const { makeListSingleBookmark } = require('./list-single-bookmark')
-const { makeAddBookmark } = require('./add-bookmark')
-const { makeEditBookmark } = require('./edit-bookmark')
-const { makeRemoveBookmark } = require('./remove-bookmark')
+const { bookmarksDb } = require("../data-access");
+const { makeListBookmarks } = require("./list-bookmarks");
+const { makeListSingleBookmark } = require("./list-single-bookmark");
+const { makeAddBookmark } = require("./add-bookmark");
+const { makeEditBookmark } = require("./edit-bookmark");
+const { makeRemoveBookmark } = require("./remove-bookmark");
 
-const listBookmarks = makeListBookmarks({ bookmarksDb })
-const listSingleBookmark = makeListSingleBookmark({ bookmarksDb })
-const addBookmark = makeAddBookmark({ bookmarksDb })
-const editBookmark = makeEditBookmark({ bookmarksDb })
-const removeBookmark = makeRemoveBookmark({ bookmarksDb })
+const listBookmarks = makeListBookmarks({ bookmarksDb });
+const listSingleBookmark = makeListSingleBookmark({ bookmarksDb });
+const addBookmark = makeAddBookmark({ bookmarksDb });
+const editBookmark = makeEditBookmark({ bookmarksDb });
+const removeBookmark = makeRemoveBookmark({ bookmarksDb });
 
 const bookmarksService = Object.freeze({
   listBookmarks,
@@ -17,7 +17,7 @@ const bookmarksService = Object.freeze({
   addBookmark,
   editBookmark,
   removeBookmark,
-})
+});
 
 module.exports = {
   bookmarksService,
@@ -26,4 +26,4 @@ module.exports = {
   addBookmark,
   editBookmark,
   removeBookmark,
-}
+};

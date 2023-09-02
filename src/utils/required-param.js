@@ -1,7 +1,7 @@
-const { RequiredParameterError } = require('./errors')
+const { RequiredParameterError } = require("./errors");
 
 function requiredParam(param) {
-  throw new RequiredParameterError(param)
+  throw new RequiredParameterError(param);
 }
 
-module.exports = { requiredParam }
+module.exports = { requiredParam };

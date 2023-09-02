@@ -3,4 +3,4 @@ fastify:
 
 db:
   port: 22227
-  database: 'bookmarks'
+  database: "bookmarks"

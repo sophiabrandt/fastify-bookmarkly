@@ -1,51 +1,51 @@
-const { editBookmark } = require('../use-cases')
-const { makeHttpError } = require('../utils/http-error')
+const { editBookmark } = require("../use-cases");
+const { makeHttpError } = require("../utils/http-error");
 
 function makePatchBookmark() {
   return async function patchBookmark(httpRequest) {
-    let bookmarkInfo = httpRequest.body
-    let id = httpRequest.params.id
+    let bookmarkInfo = httpRequest.body;
+    let id = httpRequest.params.id;
 
     if (!bookmarkInfo) {
       return makeHttpError({
         statusCode: 400,
-        errorMessage: 'Bad request. No PATCH body.',
-      })
+        errorMessage: "Bad request. No PATCH body.",
+      });
     }
 
-    if (typeof httpRequest.body === 'string') {
+    if (typeof httpRequest.body === "string") {
       try {
-        bookInfo = JSON.parse(bookInfo)
+        bookInfo = JSON.parse(bookInfo);
       } catch {
         return makeHttpError({
           statusCode: 400,
-          errorMessage: 'Bad request. PATCH body must be valid JSON.',
-        })
+          errorMessage: "Bad request. PATCH body must be valid JSON.",
+        });
       }
     }
 
     try {
-      const bookmark = await editBookmark({ id, ...bookmarkInfo })
+      const bookmark = await editBookmark({ id, ...bookmarkInfo });
       return {
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         statusCode: 200,
         body: bookmark,
-      }
+      };
     } catch (error) {
-      if (error.name === 'RangeError') {
+      if (error.name === "RangeError") {
         return makeHttpError({
           statusCode: 404,
-          errorMessage: error.message
-        })
+          errorMessage: error.message,
+        });
       }
       return makeHttpError({
         statusCode: 400,
-        errorMessage: error.message
-      })
+        errorMessage: error.message,
+      });
     }
-  }
+  };
 }
 
-module.exports = { makePatchBookmark }
+module.exports = { makePatchBookmark };
