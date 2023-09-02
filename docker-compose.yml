@@ -1,6 +1,6 @@
 services:
   db:
-    image: mongo:4.4.6-bionic
+    image: mongo:7.0
     ports:
       - 22227:27017
     volumes:
