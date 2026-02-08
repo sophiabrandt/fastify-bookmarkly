@@ -1,6 +1,6 @@
 services:
   db:
-    image: mongo:7.0
+    image: mongo:8-noble
     ports:
       - 22227:27017
     volumes:
